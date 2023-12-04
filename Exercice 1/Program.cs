@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
 
-private static int Sum(IEnumerable<object> values){ 
+
+/*private static int Sum(IEnumerable<object> values){ 
     var sum = 0;
     foreach(var item in values){
         switch(item){
@@ -15,4 +15,37 @@ private static int Sum(IEnumerable<object> values){
         }
     }
     return sum;
+}*/
+
+class Program 
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello World!");
+        string? s = null;
+        Console.WriteLine(s);
+    }
+}
+
+public class Eleve(){
+    // En c# on utilise les proriétés et les champs
+    // Les propriétés donnent acces a des méthodes qui permettent de manipuler les champs
+    // les champs sont des variables qui stockent des valeurs
+    // c'est les propriétés
+    public string Nom { get; set; }
+    public string Prenom { get; set; }
+    public string Age { get; set; }
+}
+
+public class Professeur(){
+    public string Nom { get; set; }
+    public string Prenom { get; set; }
+    public string Age { get; set; }
+}
+
+public interface ISelfLunch{
+    public void SelfLunch();
+    public void SelfLunch(string plat);
+    public void SelfLunch(string plat, string boisson);
+    public void SelfLunch(string plat, string boisson, string desert);
 }
